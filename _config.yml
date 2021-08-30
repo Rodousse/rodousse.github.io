@@ -21,7 +21,7 @@
 title: Robin Dousse
 email: rdousse63@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Robin Dousse french graphics programmer portfolio, have a look, enjoy
+  Robin Dousse, I'm a french graphics programmer, this is my portfolio, have a look and enjoy!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rodousse.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: rodousse
