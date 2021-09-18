@@ -6,6 +6,7 @@ module.exports = config => {
   config.addWatchTarget("src/js/");
   config.addPassthroughCopy("src/img/");
   config.addPassthroughCopy("src/assets/");
+  config.addPassthroughCopy("src/favicon.ico");
 
   config.addFilter("readablePostDate", (dateObj) => {
     return dateObj.toLocaleDateString("en-US", {month: 'long', day: 'numeric', year: 'numeric'});
