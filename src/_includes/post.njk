@@ -1,0 +1,20 @@
+---
+layout: base
+style: "/css/post.css"
+---
+<h1> {{ title }}</h1>
+<h2> {{ date | readablePostDate }} </h2>
+<div id="content">
+  <div id="illustration">
+    {% if image !== undefined %}
+      <img src="{{ image }}"/>
+    {% elif video !== undefined %}
+      <video controls="controls" class="illustration" autoplay="true" loop="true" muted="true">
+        <source src="{{ video }}" type="video/webm" />
+      </video>
+    {% endif %}
+  </div>
+  <div id="text">
+    {{content | safe}}
+  </div>
+</div>

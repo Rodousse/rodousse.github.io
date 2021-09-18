@@ -1,0 +1,42 @@
+
+h1, h2
+{
+  width: 100%;
+  color: #111;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
+div
+{
+  text-align: center;
+  width: 90%;
+  margin:auto;
+  margin-top: 50px;
+  font-size: 14pt;
+  font-family: 'Quicksand', sans-serif;
+  margin-bottom: 100px;
+}
+p
+{
+  color: #111;
+  font-size: 20pt;
+}
+
+div ul
+{
+  width: 100%;
+  padding-left: 0px;
+  margin-top: 50px;
+  list-style-type: none;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+div ul img
+{
+  width: 50px;
+}

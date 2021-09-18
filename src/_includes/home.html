@@ -1,0 +1,21 @@
+---
+layout: base
+style: 'css/home.css'
+---
+<script src="{{ 'js/gl-matrix.js' | url }}"></script>
+<script src="{{ 'js/app.js' | url }}"></script>
+<link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet">
+<div>
+  <canvas id="game-surface">
+    Your browser does not support HTML5
+  </canvas>
+  <div id="content">
+    <div id = "circlemoi">
+      <img src= "{{ avatar }}" id = "moi"/>
+    </div>
+    {{ content }}
+  </div>
+</div>
+<script type="text/javascript">
+  InitDemo();
+</script>

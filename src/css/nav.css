@@ -1,0 +1,104 @@
+nav
+{
+  background: linear-gradient(150deg, #092C4C, #5897D1) ;
+  background-attachment: fixed;
+  background-size: cover;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+body
+{
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+
+nav ul
+{
+  width: 100%;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  list-style-type: none;
+}
+
+nav a
+{
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#nav_icon
+{
+  display: none;
+}
+
+nav ul a
+{
+  display: block;
+  float: left;
+  width: 20%;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-left: 3px solid white;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav ul a:first-child
+{
+  border-left: 0px solid white;
+  margin-left: 10%;
+}
+
+nav li {
+  text-decoration: none;
+}
+
+#nav_cursor
+{
+  position: absolute;
+  display: none;
+  width: 20%;
+  height: 2px;
+  border-radius: 3px;
+  background-color: #FFF;
+}
+
+@media only screen and (max-width: 650px) {
+  /* For mobile phones: */
+  nav ul{
+    display: none;
+    width: 70%;
+    float: right;
+  }
+  nav ul a{
+    width: 100%;
+    border-left: 0px solid white;
+  }
+  nav ul a:first-child
+  {
+    margin-left: 0;
+  }
+  #nav_cursor
+  {
+    visibility: hidden;
+  }
+  #nav_icon
+  {
+    width: 20%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    text-align: center;
+    display: inline-block;
+  }
+}

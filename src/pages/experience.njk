@@ -1,0 +1,43 @@
+---
+title: Experience
+layout: base
+style: "/css/experience.css"
+---
+<div id="content">
+  <h1> Personal Projects </h1>
+  <div class="project_section">
+  {% for project in collections.personal.reverse() %}
+    <div class="project_wrapper">
+      <a href = "{{ project.url }}">
+        {% if project.data.image !== undefined %}
+          <img src="{{ project.data.image }}"/>
+        {% elif project.data.video !== undefined %}
+          <video controls="controls" class="illustration" autoplay="true" loop="true" muted="true">
+            <source src="{{ project.data.video }}" type="video/webm" />
+          </video>
+        {% endif %}
+        <li>{{ project.data.title }}</li>
+        <p>{{ project.date | readablePostDate }}</p>
+      </a>
+    </div>
+  {%- endfor %}
+  </div>
+  <div class="project_separator"></div>
+  <h1> Professional Experiences </h1>
+  <div class="project_section">
+  {% for project in collections.professional.reverse() %}
+    <div class="project_wrapper">
+      <a href = "{{ project.url }}">
+        {% if project.data.image !== undefined %}
+          <img src="{{ project.data.image }}"/>
+        {% elif project.data.video !== undefined %}
+          <video controls="controls" class="illustration" autoplay="true" loop="true" muted="true">
+            <source src="{{ project.data.video }}" type="video/webm" />
+          </video>
+        {% endif %}
+        <li>{{ project.data.title }}</li>
+      </a>
+    </div>
+  {%- endfor %}
+  </div>
+</div>

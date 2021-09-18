@@ -1,0 +1,21 @@
+div
+{
+  text-align: center;
+  width: 90%;
+  margin:auto;
+  margin-top: 50px;
+  font-size: 14pt;
+  font-family: 'Quicksand', sans-serif;
+  margin-bottom: 100px;
+}
+p
+{
+  color: #111;
+  font-size: 20pt;
+}
+
+div img
+{
+  margin-top: 100px;
+  width: 100%;
+}
