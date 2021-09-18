@@ -1,3 +1,96 @@
-<html>
-  <h1>Work in progress xoxo</h1>
+<!DOCTYPE html>
+<html lang="en" width="100%" height="100%">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Robin Dousse</title>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <link rel="stylesheet" href="css/home.css">
+  </head>
+  <body width="100%" height="100%" onload="positionNavCursor();">
+
+    <nav>
+      <a href="javascript:void(0);" id="nav_icon">
+        <i class="fa fa-bars"></i>
+      </a>
+      <ul>
+        <a href = "/index.html"><li>Home</li></a>
+        
+          <a href = "/pages/contact/"><li>Contact</li></a>
+          <a href = "/pages/experience/"><li>Experience</li></a>
+          <a href = "/pages/resume/"><li>Resume</li></a>
+      </ul>
+      <div id = "nav_cursor"></div>
+    </nav>
+    <div>
+      <script src="js/gl-matrix.js"></script>
+<script src="js/app.js"></script>
+<link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet">
+<div>
+  <canvas id="game-surface">
+    Your browser does not support HTML5
+  </canvas>
+  <div id="content">
+    <div id = "circlemoi">
+      <img src= "img/avatar.jpg" id = "moi"/>
+    </div>
+    <h1>Welcome</h1>
+<p>Hello and welcome ! My name is Robin Dousse, I'm a french 25 years old graphics programmer. You'll find on this website all kind of informations about myself. Feel free to explore and you'll learn about the things I've achieved in my life.</p>
+<h2>Enjoy</h2>
+<ul>
+<li><a href="https://twitter.com/rodousse"><img src="/img/twitter.png" alt=""></a></li>
+<li><a href="https://github.com/Rodousse"><img src="/img/github.png" alt=""></a></li>
+<li><a href="https://www.linkedin.com/in/robin-dousse-8698b9bb/%22"><img src="/img/linkedin.png" alt=""></a></li>
+<li><a href="https://rodousse.artstation.com/"><img src="/img/artstation.png" alt=""></a></li>
+<li><a href="https://www.shadertoy.com/user/rodousse"><img src="/img/shadertoy.png" alt=""></a></li>
+</ul>
+
+  </div>
+</div>
+<script type="text/javascript">
+  InitDemo();
+</script>
+
+    </div>
+    <script>
+
+      // Animate the cursor under the links on desktop navigation
+      $("nav a").hover(function(){
+        $("#nav_cursor").stop().fadeIn(0);
+        $("#nav_cursor").stop().animate({
+          left:$(this).offset().left + 3,
+          width:$(this).outerWidth()
+        });
+      });
+
+      $("nav").on("mouseleave", function(){
+        $("#nav_cursor").stop().fadeOut("fast");
+      });
+
+      // Animate the navigation showing up
+      $("#nav_icon").on("click", function(){
+        $("nav ul").slideToggle("fast");
+      });
+
+      $(window).resize(function(){
+        if($(window).width() > 650)
+        {
+          $("nav ul").show();
+        }
+        else
+        {
+          $("nav ul").hide();
+        }
+        positionNavCursor();
+      });
+      function positionNavCursor(){
+        $("#nav_cursor").stop().css({"top":$("nav a:last").offset().top + $("nav a:last").outerHeight() + 5 });
+      }
+    </script>
+  </body>
 </html>

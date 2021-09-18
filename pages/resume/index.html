@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" width="100%" height="100%">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resume</title>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <link rel="stylesheet" href="/css/resume.css">
+  </head>
+  <body width="100%" height="100%" onload="positionNavCursor();">
+
+    <nav>
+      <a href="javascript:void(0);" id="nav_icon">
+        <i class="fa fa-bars"></i>
+      </a>
+      <ul>
+        <a href = "/index.html"><li>Home</li></a>
+        
+          <a href = "/pages/contact/"><li>Contact</li></a>
+          <a href = "/pages/experience/"><li>Experience</li></a>
+          <a href = "/pages/resume/"><li>Resume</li></a>
+      </ul>
+      <div id = "nav_cursor"></div>
+    </nav>
+    <div>
+      <p>You'll learn about my studies by looking at my resume</p>
+<p>Download the PDF resume : <a href="/assets/Dousse_Robin_resume.pdf">Here !</a>
+<a href="/assets/Dousse_Robin_resume.pdf"><img src="/img/Dousse_Robin_resume.png" alt=""></a></p>
+
+    </div>
+    <script>
+
+      // Animate the cursor under the links on desktop navigation
+      $("nav a").hover(function(){
+        $("#nav_cursor").stop().fadeIn(0);
+        $("#nav_cursor").stop().animate({
+          left:$(this).offset().left + 3,
+          width:$(this).outerWidth()
+        });
+      });
+
+      $("nav").on("mouseleave", function(){
+        $("#nav_cursor").stop().fadeOut("fast");
+      });
+
+      // Animate the navigation showing up
+      $("#nav_icon").on("click", function(){
+        $("nav ul").slideToggle("fast");
+      });
+
+      $(window).resize(function(){
+        if($(window).width() > 650)
+        {
+          $("nav ul").show();
+        }
+        else
+        {
+          $("nav ul").hide();
+        }
+        positionNavCursor();
+      });
+      function positionNavCursor(){
+        $("#nav_cursor").stop().css({"top":$("nav a:last").offset().top + $("nav a:last").outerHeight() + 5 });
+      }
+    </script>
+  </body>
+</html>

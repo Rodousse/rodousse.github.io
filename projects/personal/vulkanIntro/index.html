@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" width="100%" height="100%">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vulkan Qt Learning</title>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <link rel="stylesheet" href="/css/post.css">
+  </head>
+  <body width="100%" height="100%" onload="positionNavCursor();">
+
+    <nav>
+      <a href="javascript:void(0);" id="nav_icon">
+        <i class="fa fa-bars"></i>
+      </a>
+      <ul>
+        <a href = "/index.html"><li>Home</li></a>
+        
+          <a href = "/pages/contact/"><li>Contact</li></a>
+          <a href = "/pages/experience/"><li>Experience</li></a>
+          <a href = "/pages/resume/"><li>Resume</li></a>
+      </ul>
+      <div id = "nav_cursor"></div>
+    </nav>
+    <div>
+      <h1> Vulkan Qt Learning</h1>
+<h2> November 21, 2018 </h2>
+<div id="content">
+  <div id="illustration">
+    
+      <img src="/img/pbrEditor.png"/>
+    
+  </div>
+  <div id="text">
+    <p>End of masters degree project.
+This is more of a personal project than a student one.
+The aim was to learn the trending graphics API Vulkan by implementing a 3D viewer.</p>
+<p>By the end of the semester, I was surprised to like this much the API. I decided to extend
+the code,
+and made it accessible to the community. Adding new features and refactoring the code on my
+free time.</p>
+<p>The software itself is implementing a 3D Vulkan viewer with texture mapping of course
+lighted thanks to a simple phong illumination.
+It provides also dynamic mesh loading and a user interface going with it allowing you to
+move in the space.</p>
+<p>The source code is crossplatform and available on github with the install steps. You'll only
+need to have Qt 5.10 at least,
+a lunarG SDK for vulkan install, and a cmake version 3.10 or newer : <a href="https://github.com/Rodousse/Arverne-Viewer/tree/development">Github Link</a></p>
+
+  </div>
+</div>
+
+    </div>
+    <script>
+
+      // Animate the cursor under the links on desktop navigation
+      $("nav a").hover(function(){
+        $("#nav_cursor").stop().fadeIn(0);
+        $("#nav_cursor").stop().animate({
+          left:$(this).offset().left + 3,
+          width:$(this).outerWidth()
+        });
+      });
+
+      $("nav").on("mouseleave", function(){
+        $("#nav_cursor").stop().fadeOut("fast");
+      });
+
+      // Animate the navigation showing up
+      $("#nav_icon").on("click", function(){
+        $("nav ul").slideToggle("fast");
+      });
+
+      $(window).resize(function(){
+        if($(window).width() > 650)
+        {
+          $("nav ul").show();
+        }
+        else
+        {
+          $("nav ul").hide();
+        }
+        positionNavCursor();
+      });
+      function positionNavCursor(){
+        $("#nav_cursor").stop().css({"top":$("nav a:last").offset().top + $("nav a:last").outerHeight() + 5 });
+      }
+    </script>
+  </body>
+</html>
